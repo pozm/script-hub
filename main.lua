@@ -1,4 +1,5 @@
 local Commit = 2.2
+if game and game.Workspace and game.ReplicatedStorage and game.Players and game.Stats and game.Chat and game.CoreGui and game.StarterGui  and game.ReplicatedFirst and game.StarterPlayer and game.StarterPack and not game.Workspace.FilteringEnabled == false then
 
 --// detect if user has steam installed
 local function isSteamInstalled()
@@ -107,4 +108,5 @@ local ESPToggle = createToggle('Toggle ESP')
 
 while wait(2) do
     print(tostring(ESPToggle.Value) .. "\n")
+end
 end
