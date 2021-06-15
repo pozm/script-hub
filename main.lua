@@ -1,6 +1,6 @@
 local Commit = 100 - 5
 
-game.Loaded:Wait()
+repeat wait() until game:IsLoaded()
 
 --// detect if user has steam installed
 local function isSteamInstalled()
