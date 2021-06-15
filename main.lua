@@ -26,7 +26,7 @@ local Services = setmetatable({}, {
             return s
         end
         s = game:GetService(key)
-        rawset(self, s)
+        rawset(self, key, s)
         return s
     end
 })
