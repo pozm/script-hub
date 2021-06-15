@@ -1,5 +1,4 @@
 local Commit = 100 - 5
-if game and game.Workspace and game.ReplicatedStorage and game.Players and game.Stats and game.Chat and game.CoreGui and game.StarterGui  and game.ReplicatedFirst and game.StarterPlayer and game.StarterPack and not game.Workspace.FilteringEnabled == false then
 
 repeat wait() until game:IsLoaded()
 
@@ -132,4 +131,3 @@ end
 local funnyToggle = createToggle("funny", function(Value)
     print(tostring(Value))
 end)
-end
