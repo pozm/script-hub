@@ -1,6 +1,5 @@
 local Commit = 100 - 5
 repeat wait() until game:IsLoaded()
-if game and game.Workspace and game.ReplicatedStorage and game.Players and game.Stats and game.Chat and game.CoreGui and game.StarterGui  and game.ReplicatedFirst and game.StarterPlayer and game.StarterPack and not game.Workspace.FilteringEnabled == false then
 
 --// detect if user has steam installed
 local function isSteamInstalled()
@@ -125,4 +124,3 @@ end
 local funnyToggle = createToggle("funny", function(Value)
     print(tostring(Value))
 end)
-end
