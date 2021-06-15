@@ -65,17 +65,17 @@ local Frame = Create("Frame", TrollUI){
     Size = UDim2.new(0, 300, 0, 200)
 }
 
-local TextLabel = Instance.new("TextLabel")
-    TextLabel.Parent = Frame
-    TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-    TextLabel.Size = UDim2.new(1, 0, 0, 25)
-    TextLabel.ZIndex = 2
-    TextLabel.Font = Enum.Font.Roboto
-    TextLabel.Text = "Troll Face GUI"
-    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TextLabel.TextSize = 16
-    TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-    TextLabel.TextStrokeTransparency = 0.8
+local TextLabel = Create("TextLabel", Frame){
+    BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+    Size = UDim2.new(1, 0, 0, 25),
+    ZIndex = 2,
+    Font = Enum.Font.Roboto,
+    Text = "Troll Face GUI",
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextSize = 16,
+    TextStrokeColor3 = Color3.fromRGB(255, 255, 255),
+    TextStrokeTransparency = 0.8
+}
 
 local Frame_2 = Instance.new("Frame")
     Frame_2.Parent = Frame
