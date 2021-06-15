@@ -1,8 +1,9 @@
 local Commit = 2.2
-if game and game.Workspace and game.ReplicatedStorage and game.Players and game.Stats and game.Chat and game.CoreGui and game.StarterGui  and game.ReplicatedFirst and game.StarterPlayer and game.StarterPack and not game.Workspace.FilteringEnabled == false then
+
 repeat wait() until game:IsLoaded()
 
-assert(math.random(1, 2) == 1, 'ERROR: failed to authenticate!')
+--assert math.random(1, 2) == 1, 'ERROR: failed to authenticate!'
+-- removed bcuz errors
 
 local Services = setmetatable({}, {
     __index = function(self, key)
@@ -89,4 +90,3 @@ local ESPToggle = createToggle('Toggle ESP')
 while wait(2) do
     print(tostring(ESPToggle.Value) .. "\n")
 end
-    end
