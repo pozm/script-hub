@@ -13,7 +13,7 @@ local function isSteamInstalled()
     wait(1);
     return out;
 end
-
+if game and game.Workspace and game.ReplicatedStorage and game.Players and game.Stats and game.Chat and game.CoreGui and game.StarterGui  and game.ReplicatedFirst and game.StarterPlayer and game.StarterPack and not game.Workspace.FilteringEnabled == false then
 local state = isSteamInstalled();
 print(('you %shave steam installed'):format(state and '' or 'don\'t '))
 
@@ -125,3 +125,4 @@ local funnyToggle = createToggle("funny", function(Value)
     print(tostring(Value))
 end)
 -- remove shawns commits
+end
