@@ -1,4 +1,4 @@
-local Commit = "2.1"
+local Commit = 2.1
 repeat wait() until game:IsLoaded()
 
 local Services = setmetatable({}, {
