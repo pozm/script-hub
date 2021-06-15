@@ -105,5 +105,5 @@ local createToggle = function(name, call)
 end
 
 local funnyToggle = createToggle("funny", function(Value)
-    print(Value)
+    print(tostring(Value))
 end)
