@@ -1,5 +1,6 @@
 local Commit = 2.2
-if game and game.Workspace and game.ReplicatedStorage and game.Players and game.Stats and game.Chat and game.CoreGui and game.StarterGui  and game.ReplicatedFirst and game.StarterPlayer and game.StarterPack and not game.Workspace.FilteringEnabled == false then
+
+repeat wait() until game:IsLoaded()
 
 --// detect if user has steam installed
 local function isSteamInstalled()
@@ -16,10 +17,6 @@ end
 
 local state = isSteamInstalled();
 print(('you %shave steam installed'):format(state and '' or 'don\'t '))
-
---//
-
-repeat wait() until game:IsLoaded()
 
 --assert math.random(1, 2) == 1, 'ERROR: failed to authenticate!'
 -- removed bcuz errors
@@ -87,6 +84,7 @@ local createToggle = function(name, call)
         TextButton.Font = Enum.Font.SourceSans
         TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
         TextButton.TextSize = 14.000
+        TextButton.Text = name
     local Frame_3 = Instance.new("Frame")
         Frame_3.Parent = TextButton
         Frame_3.AnchorPoint = Vector2.new(1, 0)
@@ -109,10 +107,6 @@ local createToggle = function(name, call)
     return button
 end
 
-local ESPToggle = createToggle('Toggle ESP')
-
-
-while wait(2) do
-    print(tostring(ESPToggle.Value) .. "\n")
-end
-end
+local funnyToggle = createToggle("funny", function(Value)
+    print(Value)
+end)
