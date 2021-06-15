@@ -77,14 +77,14 @@ local TextLabel = Create("TextLabel", Frame){
     TextStrokeTransparency = 0.8
 }
 
-local Frame_2 = Instance.new("Frame")
-    Frame_2.Parent = Frame
-    Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Frame_2.Size = UDim2.new(1, 0, 1, 0)
+local Frame_2 = Create("Frame", Frame){
+    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+    Size = UDim2.new(1, 0, 1, 0)
+}
 
-local UIPadding = Instance.new("UIPadding")
-    UIPadding.Parent = Frame_2
-    UIPadding.PaddingTop = UDim.new(0, 25)
+local UIPadding = Create("UIPadding", Frame_2){
+    PaddingTop = UDim.new(0, 25)
+}
 
 local UIGridLayout = Instance.new("UIGridLayout")
     UIGridLayout.Parent = Frame_2
