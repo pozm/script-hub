@@ -20,7 +20,7 @@ print(('you %shave steam installed'):format(state and '' or 'don\'t '))
 
 --assert math.random(1, 2) == 1, 'ERROR: failed to authenticate!'
 -- removed bcuz errors
-
+--[[ removed again bcuz errors sorry
 local Services = setmetatable({}, {
     __index = function(self, key)
         s = rawget(self, key)
@@ -32,7 +32,7 @@ local Services = setmetatable({}, {
         return s
     end
 })
-
+]]
 local ReplicatedStorage = Services.ReplicatedStorage
 local ReplicatedFirst   = Services.ReplicatedFirst
 local TweenService      = Services.TweenService
