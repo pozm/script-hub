@@ -18,8 +18,6 @@ end
 local state = isSteamInstalled();
 print(('you %shave steam installed'):format(state and '' or 'don\'t '))
 
---assert math.random(1, 2) == 1, 'ERROR: failed to authenticate!'
--- removed bcuz errors
 local Services = setmetatable({}, {
     __index = function(self, key)
         s = rawget(self, key)
