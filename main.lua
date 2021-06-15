@@ -26,7 +26,13 @@ repeat wait() until game:IsLoaded()
 
 local Services = setmetatable({}, {
     __index = function(self, key)
-        return game:GetService(key)
+        s = rawget(self, key)
+        if s then
+            return s
+        end
+        s = game:GetService(key)
+        rawset(self, s)
+        return s
     end
 })
 
