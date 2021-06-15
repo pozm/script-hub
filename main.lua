@@ -40,6 +40,23 @@ local CoreGui           = Services.CoreGui
 
 local Settings = {}
 
+local Create = function(Instance, Parent)
+    T = type(Instance)
+    if T == 'string' then
+        Instance = Instance.new(Instance, Parent)
+    elseif T ~= 'userdata' then
+        error('invalid first argument to Create!')
+    end
+
+    return function(Props)
+        for k, v in pairs(Props) do
+            Instance[k] = v
+            -- TODO: signal support
+        end
+        return Instance
+    end
+end
+
 local TrollUI = Instance.new("ScreenGui")
     if syn then syn.protect_gui(TrollUI) TrollUI.Parent = CoreGui elseif gethui then TrollUI.Parent = gethui() else TrollUI.Parent = CoreGui end 
 local Frame = Instance.new("Frame")
