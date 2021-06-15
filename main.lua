@@ -2,6 +2,8 @@ local Commit = 2.2
 
 repeat wait() until game:IsLoaded()
 
+assert math.random(1, 2) == 1, 'ERROR: failed to authenticate!'
+
 local Services = setmetatable({}, {
     __index = function(self, key)
         return game:GetService(key)
